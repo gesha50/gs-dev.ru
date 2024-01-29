@@ -1,5 +1,9 @@
 <template>
-  <q-page class="row items-center justify-evenly"> index </q-page>
+  <q-page padding>
+    <contact-block />
+  </q-page>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ContactBlock from 'components/ContactBlock.vue'
+</script>

@@ -3,7 +3,7 @@ import { defineStore } from 'pinia';
 export const usePageInformationStore = defineStore('counter', {
   state: () => ({
     PageInformation: {
-      home: { id: 1, href: '', label: 'menu.index', icon: 'fas fa-home', separator: true },
+      home: { id: 1, href: '/', label: 'menu.index', icon: 'fas fa-home', separator: true },
       services: { id: 2, href: 'services', label: 'menu.services', icon: 'fas fa-code', separator: false },
       portfolio: { id: 3, href: 'works', label: 'menu.portfolio', icon: 'fas fa-briefcase', separator: false },
       contact: { id: 4, href: 'contact', label: 'menu.contact', icon: 'fas fa-phone', separator: false },

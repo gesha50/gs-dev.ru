@@ -1,5 +1,12 @@
 <template>
-  <q-page class="row items-center justify-evenly"> work </q-page>
+  <q-page padding>
+    <portfolio-block />
+    <contact-block />
+  </q-page>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ContactBlock from 'components/ContactBlock.vue'
+import PortfolioBlock from 'components/PortfolioBlock.vue'
+
+</script>

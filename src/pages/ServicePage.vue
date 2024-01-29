@@ -1,5 +1,12 @@
 <template>
-  <q-page class="row items-center justify-evenly"> serv </q-page>
+  <q-page padding>
+    <service-block />
+    <contact-block />
+  </q-page>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ContactBlock from 'components/ContactBlock.vue'
+import ServiceBlock from 'components/ServiceBlock.vue'
+
+</script>

@@ -1,5 +1,12 @@
 <template>
-  <q-page class="row items-center justify-evenly"> sertif </q-page>
+  <q-page padding>
+    <certificate-block />
+    <contact-block />
+  </q-page>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import CertificateBlock from 'components/CertificateBlock.vue'
+import ContactBlock from 'components/ContactBlock.vue'
+
+</script>

@@ -1,5 +1,5 @@
 <template>
-  <q-header reveal :reveal-offset="10" elevated class="text-black container" height-hint="98">
+  <q-header reveal :reveal-offset="10" elevated class="text-black" height-hint="98">
     <q-toolbar>
       <q-btn class="xs"  @click="$emit('drawer')" color="white" text-color="primary" round icon="menu" />
       <q-avatar class="q-mx-md q-my-sm">

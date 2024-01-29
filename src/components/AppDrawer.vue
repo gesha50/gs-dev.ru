@@ -17,7 +17,7 @@
               <q-icon :name="menuItem.icon" />
             </q-item-section>
             <q-item-section>
-              {{ menuItem.label }}
+              {{ $t(menuItem.label) }}
             </q-item-section>
           </q-item>
           <q-separator :key="'sep' + menuItem.id"  v-if="menuItem.separator" />
