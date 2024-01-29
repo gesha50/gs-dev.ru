@@ -18,17 +18,17 @@
           v-for="menuItem in PageInformation"
           :key="menuItem.id"
           :to="menuItem.href"
-          :label="menuItem.label"
+          :label="$t(menuItem.label)"
         />
       </q-tabs>
       <q-space></q-space>
-      <q-select filled v-model="locale" :options="localeOptions" />
+      <q-select  filled v-model="locale" :options="localeOptions" emit-value />
     </q-toolbar>
   </q-header>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import {onMounted, onUpdated, ref} from "vue";
 import { useI18n } from "vue-i18n/dist/vue-i18n";
 import {usePageInformationStore} from "stores/page-information-store";
 import {storeToRefs} from "pinia/dist/pinia";
@@ -39,7 +39,6 @@ const localeOptions = ref([
   { value: 'en-US', label: 'English' },
   { value: 'ru', label: 'Russia' },
 ]);
-
 const { PageInformation } = storeToRefs(usePageInformationStore());
 </script>
 
@@ -48,7 +47,7 @@ const { PageInformation } = storeToRefs(usePageInformationStore());
   background: rgba(255, 255, 255, 1) !important;
 }
 .q-tab__label {
-  font-family: 'RedHatDisplay-Black';
+  font-family: 'RedHatDisplay-Black',serif;
 }
 .self-stretch {
   align-self: center;

@@ -7,14 +7,16 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+    <app-footer />
   </q-layout>
 </template>
 
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
-import { useI18n } from 'vue-i18n';
 import AppHeader from '../components/AppHeader.vue';
 import AppDrawer from '../components/AppDrawer.vue'
+import AppFooter from '../components/AppFooter.vue'
+
 import {usePageInformationStore} from "stores/page-information-store";
 
 const store = usePageInformationStore();
