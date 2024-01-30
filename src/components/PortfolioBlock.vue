@@ -6,7 +6,7 @@
       </div>
       <header-block
         :header="$t('portfolio.description')"
-        :link="'/works'"
+        :link="link"
       ></header-block>
       <div class="portfolio__body row full-width">
         <div v-for="(image, i) in portfolio" :key="i" class="col-12 col-sm-6">
@@ -27,9 +27,10 @@ import HeaderBlock from '../components/HeaderBlock.vue';
 import TitleBlock from '../components/TitleBlock.vue';
 import { storeToRefs } from 'pinia/dist/pinia';
 import { usePortfolioStore } from 'stores/portfolio-store';
-
+defineProps({
+  link: {type: String, required: false}
+})
 const { portfolio } = storeToRefs(usePortfolioStore());
-
 const getImageUrl = (name) => {
   return new URL(`../assets/img/portfolio/${name}`, import.meta.url).href;
 };

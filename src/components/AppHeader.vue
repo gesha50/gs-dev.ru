@@ -45,14 +45,13 @@ import { ref } from 'vue';
 import { useI18n } from 'vue-i18n/dist/vue-i18n';
 import { usePageInformationStore } from 'stores/page-information-store';
 import { storeToRefs } from 'pinia/dist/pinia';
+import { useLangStore } from 'stores/lang-store';
 
 const tab = ref('');
 const { locale } = useI18n({ useScope: 'global' });
-const localeOptions = ref([
-  { value: 'en-US', label: 'English' },
-  { value: 'ru', label: 'Russia' },
-]);
 const { PageInformation } = storeToRefs(usePageInformationStore());
+const { localeOptions } = storeToRefs(useLangStore());
+
 </script>
 
 <style lang="scss">

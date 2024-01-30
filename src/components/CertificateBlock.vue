@@ -5,7 +5,7 @@
     </div>
     <header-block
       :header="$t('certificates.description')"
-      :link="'/certificates'"
+      :link="link"
     ></header-block>
     <div class="certificates__body full-width row q-mt-lg">
       <div v-for="(img, i) in images" :key="i" class="col-6 col-sm-3">
@@ -23,10 +23,11 @@ import TitleBlock from '../components/TitleBlock.vue';
 import { storeToRefs } from 'pinia/dist/pinia';
 import { useCertificateStore } from 'stores/certificate-store';
 import { useI18n } from 'vue-i18n/dist/vue-i18n';
+defineProps({
+  link: {type: String, required: false}
+})
 const { locale } = useI18n({ useScope: 'global' });
-
 const { images } = storeToRefs(useCertificateStore());
-
 const getImageUrl = (name) => {
   return new URL(
     `../assets/img/certificates/${locale.value}/${name}`,

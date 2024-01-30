@@ -1,10 +1,10 @@
 <template>
   <q-page padding>
     <index-main-dev-block />
-    <service-block />
-    <portfolio-block />
+    <service-block :link="'/services'" />
+    <portfolio-block :link="'/works'" />
     <skills-block />
-    <certificate-block />
+    <certificate-block :link="'/certificates'" />
     <contact-block />
   </q-page>
 </template>
