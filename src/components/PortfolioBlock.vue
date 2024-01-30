@@ -2,22 +2,17 @@
   <section class="shadowBlock">
     <div class="portfolio q-mt-xl column items-start">
       <div class="portfolio__miniTitle">
-        <title-block
-          :title="$t('portfolio.title')"
-        ></title-block>
+        <title-block :title="$t('portfolio.title')"></title-block>
       </div>
       <header-block
         :header="$t('portfolio.description')"
         :link="'/works'"
       ></header-block>
       <div class="portfolio__body row full-width">
-        <div
-          v-for="(image, i) in portfolio"
-          :key="i"
-          class="col-12 col-sm-6">
+        <div v-for="(image, i) in portfolio" :key="i" class="col-12 col-sm-6">
           <q-img
             img-class="q-ma-sm portfolioImg"
-            :ratio="4/3"
+            :ratio="4 / 3"
             :src="getImageUrl(image.path)"
             alt=""
           />
@@ -30,14 +25,14 @@
 <script setup>
 import HeaderBlock from '../components/HeaderBlock.vue';
 import TitleBlock from '../components/TitleBlock.vue';
-import {storeToRefs} from "pinia/dist/pinia";
-import {usePortfolioStore} from "stores/portfolio-store";
+import { storeToRefs } from 'pinia/dist/pinia';
+import { usePortfolioStore } from 'stores/portfolio-store';
 
-const { portfolio } = storeToRefs(usePortfolioStore())
+const { portfolio } = storeToRefs(usePortfolioStore());
 
 const getImageUrl = (name) => {
-  return new URL(`../assets/img/portfolio/${name}`, import.meta.url).href
-}
+  return new URL(`../assets/img/portfolio/${name}`, import.meta.url).href;
+};
 </script>
 
 <style lang="scss">

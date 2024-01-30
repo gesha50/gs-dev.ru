@@ -6,7 +6,6 @@
 </template>
 
 <script setup lang="ts">
-import ContactBlock from 'components/ContactBlock.vue'
-import PortfolioBlock from 'components/PortfolioBlock.vue'
-
+import ContactBlock from 'components/ContactBlock.vue';
+import PortfolioBlock from 'components/PortfolioBlock.vue';
 </script>

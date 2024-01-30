@@ -5,5 +5,5 @@
 </template>
 
 <script setup lang="ts">
-import ContactBlock from 'components/ContactBlock.vue'
+import ContactBlock from 'components/ContactBlock.vue';
 </script>

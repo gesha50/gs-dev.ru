@@ -27,7 +27,7 @@ export const useSkillsStore = defineStore('skills', {
         color: '#FFFBF2',
         text: 'MySQL',
       },
-    ]
+    ],
   }),
   getters: {
     //

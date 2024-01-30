@@ -33,12 +33,12 @@ export const useServiceStore = defineStore('service', {
         title: 'service.services.design.title',
         description: 'service.services.design.description',
       },
-    ]
+    ],
   }),
   getters: {
     //
   },
   actions: {
-   //
+    //
   },
 });

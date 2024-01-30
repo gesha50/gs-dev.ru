@@ -1,14 +1,14 @@
 <template>
   <div class="headerBlock full-width q-my-md row justify-between">
     <div class="headerBlock__header">
-      {{header}}
+      {{ header }}
     </div>
     <div v-if="link" class="headerBlock__link row items-baseline">
       <router-link :to="link">{{ $t('btn.more') }}</router-link>
-      <q-icon class="q-ml-sm" name="fas fa-arrow-right"/>
+      <q-icon class="q-ml-sm" name="fas fa-arrow-right" />
     </div>
     <div v-if="email" class="headerBlock__email">
-      <a :href="'mailto:'+email">{{email}}</a>
+      <a :href="'mailto:' + email">{{ email }}</a>
     </div>
   </div>
 </template>
@@ -18,11 +18,11 @@ defineProps({
   header: { type: String, required: true },
   link: { type: String, required: false },
   email: { type: String, required: false },
-})
+});
 </script>
 
 <style lang="scss">
-@import "../css/app";
+@import '../css/app';
 .headerBlock {
   &__header {
     font-weight: bold;
@@ -41,7 +41,7 @@ defineProps({
       font-size: 26px;
       max-width: 60%;
     }
-    @media (max-width: $breakpoint-xs)  {
+    @media (max-width: $breakpoint-xs) {
       // for mobile
       font-size: 22px;
       max-width: 100%;

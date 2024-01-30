@@ -1,8 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lff" class="container">
-    <app-header
-      @drawer="store.triggerDrawer()"
-    />
+    <app-header @drawer="store.triggerDrawer()" />
     <app-drawer />
     <q-page-container>
       <router-view />
@@ -12,31 +10,30 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue';
 import AppHeader from '../components/AppHeader.vue';
-import AppDrawer from '../components/AppDrawer.vue'
-import AppFooter from '../components/AppFooter.vue'
+import AppDrawer from '../components/AppDrawer.vue';
+import AppFooter from '../components/AppFooter.vue';
 
-import {usePageInformationStore} from "stores/page-information-store";
+import { usePageInformationStore } from 'stores/page-information-store';
 
 const store = usePageInformationStore();
-const windowWidth = ref(window.innerWidth)
+const windowWidth = ref(window.innerWidth);
 
 const handleResize = () => {
-  windowWidth.value = window.innerWidth
-  store.screenWidthForDrawer(windowWidth.value)
-}
+  windowWidth.value = window.innerWidth;
+  store.screenWidthForDrawer(windowWidth.value);
+};
 onMounted(() => {
-  window.addEventListener('resize', handleResize)
-})
+  window.addEventListener('resize', handleResize);
+});
 onUnmounted(() => {
-  window.removeEventListener('resize', handleResize)
-})
-
+  window.removeEventListener('resize', handleResize);
+});
 </script>
 
 <style lang="scss">
-@import "src/css/app.scss";
+@import 'src/css/app.scss';
 
 .q-page-container {
   padding-right: 0 !important;
@@ -74,7 +71,7 @@ onUnmounted(() => {
     padding-left: 2%;
     padding-right: 2%;
   }
-  @media (max-width: $breakpoint-xs)  {
+  @media (max-width: $breakpoint-xs) {
     // for mobile
     max-width: 99%;
     padding-left: 10px;

@@ -1,6 +1,6 @@
 <template>
   <div class="titleBlock">
-    <div class="titleBlock__text">{{title}}</div>
+    <div class="titleBlock__text">{{ title }}</div>
     <div class="titleBlock__line"></div>
   </div>
 </template>
@@ -8,11 +8,11 @@
 <script setup>
 defineProps({
   title: { type: String, required: true },
-})
+});
 </script>
 
 <style lang="scss">
-@import "../css/app";
+@import '../css/app';
 
 .titleBlock {
   &__text {

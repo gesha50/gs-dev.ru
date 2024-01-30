@@ -22,14 +22,13 @@
   </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style lang="scss">
-@import "../css/app";
+@import '../css/app';
 .topBlock {
   &__left {
-    font-family: 'RedHatDisplay-BlackItalic',serif;
+    font-family: 'RedHatDisplay-BlackItalic', serif;
   }
   &__topText {
     font-size: 20px;
@@ -44,12 +43,11 @@
     font-weight: normal;
   }
   &__imageBlock {
-
   }
   &__image {
     max-width: 500px;
     max-height: 500px;
-    box-shadow: 0px 0px 76px 33px rgba(81,45,148, 0.5);
+    box-shadow: 0px 0px 76px 33px rgba(81, 45, 148, 0.5);
     //box-shadow:  19px -19px 48px $my_purple,
     //-19px 19px 48px $my_pink;
   }

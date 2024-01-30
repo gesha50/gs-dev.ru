@@ -2,7 +2,7 @@
   <q-footer class="footer bg-white text-grey-9">
     <div style="max-width: 300px; margin: 20px auto">
       <div class="text-center footer__text">
-        {{$t('footer.text')}}
+        {{ $t('footer.text') }}
       </div>
       <div class="q-mt-sm row justify-around">
         <a
@@ -11,9 +11,7 @@
           :href="contact.href"
           :target="contact.target"
         >
-          <icon-custom
-            :icon="contact.icon"
-          />
+          <icon-custom :icon="contact.icon" />
         </a>
       </div>
     </div>
@@ -21,9 +19,9 @@
 </template>
 
 <script setup>
-import IconCustom from '../components/IconCustom.vue'
-import {storeToRefs} from "pinia/dist/pinia";
-import {usePageInformationStore} from "stores/page-information-store";
+import IconCustom from '../components/IconCustom.vue';
+import { storeToRefs } from 'pinia/dist/pinia';
+import { usePageInformationStore } from 'stores/page-information-store';
 const { contactWithMe } = storeToRefs(usePageInformationStore());
 </script>
 
